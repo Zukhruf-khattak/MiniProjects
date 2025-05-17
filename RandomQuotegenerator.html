@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- html -->
+<!-- <div class="container">
+<h2 >Random friend Name Generator</h2>
+
+<button onclick="findmybestfriend()">Now My BestFriend</button>
+<p class="para"></p>
+
+</div> -->
+
+<div class="container">
+<h2 >Random Quote Generator</h2>
+
+<button onclick="findquote()">Click! to get new Quote </button>
+<p class="para"></p>
+
+</div>
+
+
+
+    <style>
+/* css */
+body{
+   background-color: darkslategray;
+}
+.container{
+    border: 3px solid rgb(30, 23, 39);
+    background: rgba(128, 128, 128, 0.815);
+    text-align: center;
+    box-shadow: 2px 2px 5px rgb(255, 0, 0);
+}
+button{
+    border: 1px solid white;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(0, 255, 98);
+    width: 150px;
+    height: 50px;
+    margin: 3px;
+}
+h2{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgba(217, 255, 0, 0.945);
+    text-shadow: 2px 2px 5px rgb(230, 1, 51);
+}
+
+
+    </style>
+</body>
+
+<script>
+// js code
+// let myfriends=["Huma" , "Sana", "sara", "kausar", "Sara", "Saira", "Duree", "nishal", "jeena", "aishoo"]
+
+// let friend = " ";
+
+// function findmybestfriend(){
+//     // console.log("Huma is my besttttt buddyyyyyy");
+//     let friend = Math.floor(Math.random() * 10);
+//     friend = myfriends [friend]
+//     console.log(friend);
+
+//     document.querySelector(".para").textContent += friend + " " 
+// }
+
+
+let myquotes = [ 
+   "The only way to do great work is to love what you do.", 
+   "Believe you can and you're halfway there." ,
+   "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+   "Dont watch the clock; do what it does. Keep going.",
+   "Everything you can imagine is real.",
+   "The harder you work for something, the greater youll feel when you achieve it." ,
+   "Dream big and dare to fail." ,
+   "Your time is limited, so dont waste it living someone elses life." ,
+   "Start where you are. Use what you have. Do what you can.",
+   "It always seems impossible until its done."
+]
+
+let quote = " "
+function findquote(){
+    let quote = Math.floor(Math.random() *10);
+   quote  = myquotes[quote]
+   console.log(quote)
+
+   document.querySelector(".para").innerHTML += quote + "<br>";
+}
+</script>
+</html>
