@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa; /* Light blue background */
+      text-align: center;
+      padding: 50px;
+    }
+    h2 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #00796b;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+    h3 {
+      margin-top: 30px;
+      color: #444;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Rock Paper Scissors Game</h2>
+  <button onclick="play()">Let's Play Game</button>
+  <h3>Your turn to play</h3>
+
+  <script>
+    function play() {
+      let score = Math.ceil(Math.random() * 3); // Corrected logic
+      let result = score === 1 ? "Win" : score === 2 ? "Lose" : "Draw";
+      console.log(result);
+      document.querySelector("h3").textContent = result;
+    }
+  </script>
+</body>
+</html>
