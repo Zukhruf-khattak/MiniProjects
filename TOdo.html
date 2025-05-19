@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ .todolist{
+    border: 3px solid rgb(233, 9, 9);
+    background-color: rgb(166, 255, 0);
+    width: 1500px;
+    height: 250px;
+ }
+ .todolist input{
+  text-align: center;
+ }
+ h2{
+    text-align: center;
+ }
+
+    </style>
+
+
+    <div class="todolist">
+        <h2>My To Do List</h2>
+    <input type="text" placeholder="ToDoList">
+    <button onclick="addlist()">Add</button>
+</div>
+<ul>
+
+
+</ul>
+
+</body>
+
+<script>
+function addlist(){
+    let inputext = document.querySelector("input").value
+    document.querySelector("ul").innerHTML += ` <li> ${inputext} </li>`
+    document.querySelector ("input").value = ""
+}
+
+</script>
+</html>
