@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- html code -->
+     
+    <div class="parentdiv">
+        <input type="text" id="display" disabled>
+
+        <div class="row1">
+            <button onclick="appendValue('+')">+</button>
+            <button onclick="appendValue('-')">-</button>
+            <button onclick="appendValue('*')">*</button>
+            <button onclick="appendValue('%')">%</button>
+        </div>
+        <div class="row2">
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="calculate()">=</button>
+        </div>
+        <div class="row3">
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('7')">7</button>
+        </div>
+        <div class="row4">
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+        </div>
+        <div class="row5">
+            <button onclick="backspace()">⌫</button>
+        </div>
+    </div>
+    
+<!-- css code -->
+ <style>
+        body {
+            background-color: rgb(112, 111, 111);
+            text-align: center;
+            padding: 55px;
+        }
+
+        .parentdiv {
+            border: 3px solid black;
+            border-radius: 29px;
+            box-shadow: 2px 3px 5px red;
+            padding: 25px;
+            width: 300px;
+            display: inline-block;
+            background-color: white;
+        }
+
+        button {
+            border: 1px solid black;
+            border-radius: 8px;
+            font-size: 20px;
+            font-family: sans-serif;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #display {
+            width: 90%;
+            height: 40px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-align: right;
+            padding: 5px;
+        }
+    </style>
+
+
+    
+    
+</body>
+
+<script>
+
+function appendValue(value) {
+    document.querySelector('#display').value += value;
+}
+
+function clearDisplay() {
+    document.querySelector('#display').value = '';
+}
+
+function backspace() {
+    let current = document.querySelector('#display').value;
+    document.querySelector('#display').value = current.slice(0, -1);
+}
+
+function calculate() {
+    try {
+        let result = eval(document.querySelector('#display').value);
+        document.querySelector('#display').value = result;
+    } catch (error) {
+        document.querySelector('#display').value = 'Error';
+    }
+}
+
+
+
+
+
+</script>
+</html>
